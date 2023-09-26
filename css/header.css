@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl;
+  }
+  .container{
+    padding-left: 20px;
+    padding-right:20px;
+    margin-left: auto;
+    margin-right: auto; 
+  }
+  @media (min-width:768px){
+    .container{
+     width: 750px;
+    }
+  }
+  @media (min-width:992px){
+    .container{
+      width: 965px;
+    }
+  }
+  @media (min-width:1200px){
+    .container{
+      width: 1170px;
+    }
+  }
+  body{
+    background-color: #e6e4e483;
+  }
+  header{
+    padding: 10px;
+  }
+  header .container{
+    display: flex;
+    align-items: center;
+  }
+  header .container img{
+    width: 60px;
+    height:60px;
+    border-radius: 50%;
+  }
+  header nav{
+    flex-basis:80% ;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+  }
+  header .container ul{
+    list-style: none;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+  }
+  header .container ul li{
+    width: calc(100% - 40px);
+    margin-right:40px ;
+    height: 30px;
+    color: #393939;
+  }
+  header .container ul li a{
+    color:inherit;
+    text-decoration: none;
+  }
+  @media(min-width:768px){
+    header .container ul li{
+      position: relative;
+    }
+    header .container ul li:hover::after {
+  content: "";
+  width:100%;
+  height:1px;
+  background-color: var(--main-color);;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  }
+  }
+  @media (max-width:769px){
+    .container ul{
+       flex-direction: column;
+       position: absolute;
+       top:30px;
+       left: 0;
+       opacity: 1;
+    }
+    .container ul li{
+      border-bottom:1px solid #777 ;
+      background-color: #ddd;
+      padding:2px 60px 0 20px;
+      transition: 0.9s;
+      position: relative;
+    }
+    /* .container ul li:first-child::before{
+     position: absolute;
+     content: "";
+     border-width:15px;
+     border-color:red transparent transparent transparent;
+     border-style:solid ;
+     left:0;
+     top:-20px
+    } */
+    .container ul li:nth-last-child(1){
+      border-bottom: none;
+    }
+    .container ul li:hover{
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    /* header .container .icon{
+      width:30px;
+      position: absolute;
+      
+    }
+    header .container .icon span{
+      width: 100%;
+      height: 2px;
+      background-color: #222;
+      margin-bottom: 5px;
+      display: flex;
+    } */
+    /* header .container nav:hover  ul{
+      opacitya: 1;
+  
+    } */
+  }
